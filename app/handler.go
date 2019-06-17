@@ -1,19 +1,16 @@
 package app
 
 import (
-	"html/template"
-	"log"
 	"net/http"
+	"text/template"
+
+	"github.com/NguyenHoaiPhuong/betta-house/utils"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("html/09_CSS.html")
-	if err != nil {
-		log.Fatalln(err)
-	}
+	tpl, err := template.ParseFiles("static/Login.html")
+	utils.CheckError(err)
 
 	err = tpl.Execute(w, nil)
-	if err != nil {
-		log.Fatalln(err)
-	}
+	utils.CheckError(err)
 }
