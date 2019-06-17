@@ -1,0 +1,6 @@
+{    
+    "mongodbServerHost": "localhost",
+    "mongodbPort": "27017",
+    "mongodbName": "betta_fish_house",
+    "apiPort": "9999"
+}
